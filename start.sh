@@ -1,2 +1,2 @@
 #!/bin/sh
-docker-compose up --force-recreate gin-web
+docker-compose up -d --force-recreate gin-web
