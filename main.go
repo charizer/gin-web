@@ -10,11 +10,11 @@ import (
 )
 
 func main() {
-	cfg := config.GetConfig()
+	cfg := config.GetConfig()  
 	gin.SetMode(cfg.Mode)
 	logger.GetLogger().Traceln(viper.AllSettings())
 	g := gin.Default()
 	router.Load(g)
 	model.Load()
-	_ = g.Run(":" + cfg.Port)   
+	_ = g.Run(":" + cfg.Port)
 }
