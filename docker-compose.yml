@@ -1,0 +1,10 @@
+version: '2'
+services:
+  gin-web:
+    image: 'gin-web'
+    environment:
+      LOG_FILE: '/var/logs/gin-web.log'
+      REDIS_URL: '["redis://docker.for.mac.localhost:6379/0"]'
+      MONGO_URL: 'mongodb://docker.for.mac.localhost:27017'
+    ports:
+      - 12035:12035
