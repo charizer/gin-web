@@ -16,5 +16,5 @@ func main() {
 	g := gin.Default()
 	router.Load(g)
 	model.Load()
-	_ = g.Run(":" + cfg.Port)
+	_ = g.Run(":" + cfg.Port)   
 }
