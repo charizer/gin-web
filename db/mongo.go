@@ -4,6 +4,7 @@ import (
 	"gopkg.in/mgo.v2"
 )
 
+//mongo
 type DBConnection struct {
 	session *mgo.Session
 }

@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	cfg := config.GetConfig()  
+	cfg := config.GetConfig()
 	gin.SetMode(cfg.Mode)
 	logger.GetLogger().Traceln(viper.AllSettings())
 	g := gin.Default()
