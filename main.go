@@ -11,7 +11,7 @@ import (
 
 func main() {
 	cfg := config.GetConfig()
-	gin.SetMode(cfg.Mode)     
+	gin.SetMode(cfg.Mode)
 	logger.GetLogger().Traceln(viper.AllSettings())
 	g := gin.Default()
 	router.Load(g)

@@ -1,10 +1,6 @@
-FROM alpine
-
-RUN ls
-
-RUN set -ex \
-  && apk add --no-cache ca-certificates
-
-COPY gin-web /opt/gin-web
-
-ENTRYPOINT /opt/gin-web
+FROM golang:1.11.1-alpine
+RUN mkdir /build && mkdir -p /var/logs
+WORKDIR /build
+ADD . /build
+RUN sh build.sh
+ENTRYPOINT ["./gin-web"]
